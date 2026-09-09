@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mr. Chopsticks — Pan-Asian in Denton, TX</title>
+<meta name="description" content="Sushi, stir-fry, Thai and Chinese cooking on Scripture Street in Denton since 1985. Open 11am–9pm every day. Walk in, or call (940) 382-5437.">
+<link rel="canonical" href="https://mrchopsticksdenton.com/">
+<meta name="theme-color" content="#150D09">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Mr. Chopsticks">
+<meta property="og:title" content="Mr. Chopsticks — Pan-Asian in Denton, TX">
+<meta property="og:description" content="Sushi, stir-fry, Thai and Chinese cooking on Scripture Street since 1985. Open 11am–9pm every day.">
+<meta property="og:url" content="https://mrchopsticksdenton.com/">
+<meta property="og:image" content="https://mrchopsticksdenton.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mr. Chopsticks, pan-Asian restaurant at 1633 Scripture St, Denton TX.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mr. Chopsticks — Pan-Asian in Denton, TX">
+<meta name="twitter:description" content="Sushi, stir-fry, Thai and Chinese cooking on Scripture Street since 1985.">
+<meta name="twitter:image" content="https://mrchopsticksdenton.com/assets/og.jpg">
+
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+
+<style>
+:root{
+  --ink:#150D09;
+  --ground:#211610;
+  --ground-2:#1A100B;
+  --paper:#F2E9D8;
+  --paper-dim:#C4B7A3;
+  --lacquer:#B8382A;
+  --lacquer-lit:#D9503C;
+  --jade:#8FAE93;
+  --lamp:#E7A344;
+  --brand-maroon:#6D3737;   /* taken from their existing site */
+  --rule:rgba(242,233,216,.14);
+  --measure:62ch;
+  --pad:clamp(1.25rem,5vw,4.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.0625rem);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Instrument Serif","Lora",Georgia,"Times New Roman",serif;
+  font-weight:400;letter-spacing:.004em;margin:0}
+p{margin:0 0 1.1em}
+:focus-visible{outline:2.5px solid var(--lamp);outline-offset:3px;border-radius:2px}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--lamp);
+  color:var(--ink);padding:.7rem 1.1rem;font-weight:600}
+.skip:focus{left:.6rem;top:.6rem}
+
+.wrap{width:100%;max-width:72rem;margin-inline:auto;padding-inline:var(--pad)}
+.measure{max-width:var(--measure)}
+
+/* ---------- chopstick-rest rule: the divider motif ---------- */
+.rest{display:flex;align-items:center;gap:.85rem;margin:0 0 2.2rem}
+.rest::after{content:"";flex:1;height:1px;background:var(--rule)}
+.rest i{display:block;width:26px;height:3px;background:var(--lacquer);
+  transform:skewX(-32deg);border-radius:1px;flex:none}
+.rest span{font-size:.82rem;letter-spacing:.05em;color:var(--jade);
+  font-weight:500;flex:none;font-style:normal}
+
+/* ---------- header ---------- */
+.bar{position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:.85rem var(--pad);
+  transition:background .35s ease,backdrop-filter .35s ease,border-color .35s ease;
+  border-bottom:1px solid transparent}
+.bar.stuck{background:rgba(21,13,9,.86);backdrop-filter:blur(11px);
+  border-bottom-color:var(--rule)}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand img{width:34px;height:34px}
+.brand b{font-family:"Instrument Serif","Lora",Georgia,serif;font-weight:400;
+  font-size:1.28rem;letter-spacing:.01em}
+.bar nav{display:flex;align-items:center;gap:1.6rem}
+.bar nav a{font-size:.9rem;text-decoration:none;color:var(--paper-dim);
+  transition:color .2s}
+.bar nav a:hover{color:var(--paper)}
+@media (max-width:860px){.bar nav a.jump{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+  font-weight:600;font-size:.95rem;padding:.72rem 1.25rem;border-radius:2px;
+  border:1px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-fill{background:var(--lacquer);color:#fff}
+.btn-fill:hover{background:var(--lacquer-lit)}
+.btn-line{border-color:rgba(242,233,216,.34);color:var(--paper)}
+.btn-line:hover{border-color:var(--lamp);color:var(--lamp)}
+.bar .btn{padding:.55rem 1rem;font-size:.88rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:-8% 0 -8%;z-index:-3;will-change:transform}
+.hero-media video,.hero-media img.poster{width:100%;height:100%;object-fit:cover}
+.hero-veil{position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background:
+    linear-gradient(to top,rgba(21,13,9,.97) 4%,rgba(21,13,9,.62) 38%,rgba(21,13,9,.24) 72%,rgba(21,13,9,.5) 100%),
+    radial-gradient(120% 85% at 18% 88%,rgba(21,13,9,.85),transparent 62%)}
+.hero-drift{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background:url("assets/layer-steam.png") center bottom/cover no-repeat;
+  will-change:transform}
+.hero-in{padding-block:clamp(4.5rem,13vh,9rem) clamp(2.5rem,7vh,4.5rem);width:100%}
+
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-size:.86rem;
+  color:var(--jade);margin:0 0 1.1rem}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--jade);flex:none;
+  box-shadow:0 0 0 4px rgba(143,174,147,.16)}
+.dot.shut{background:var(--lacquer-lit);box-shadow:0 0 0 4px rgba(217,80,60,.16)}
+
+h1{font-size:clamp(3.3rem,12.5vw,7.5rem);line-height:.9;margin:0 0 1.3rem;
+  letter-spacing:-.012em}
+h1 em{font-style:italic;display:block}
+.hero-lede{font-size:clamp(1.08rem,1rem + .55vw,1.4rem);color:var(--paper-dim);
+  max-width:34ch;margin:0 0 2.1rem;line-height:1.5}
+.hero-acts{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.6rem}
+@media (max-width:520px){
+  .hero-acts{flex-direction:column;align-items:stretch}
+  .hero-acts .btn{justify-content:center}
+}
+.hero-facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;font-size:.9rem;
+  color:var(--paper-dim);border-top:1px solid var(--rule);padding-top:1.15rem}
+.hero-facts a{color:var(--paper-dim);text-decoration-color:rgba(242,233,216,.3);
+  text-underline-offset:3px}
+.hero-facts a:hover{color:var(--lamp)}
+
+/* ---------- generic section ---------- */
+section{position:relative;padding-block:clamp(4.5rem,11vh,8rem)}
+h2{font-size:clamp(2.1rem,1.5rem + 2.4vw,3.5rem);line-height:1.04;
+  margin:0 0 1.4rem;letter-spacing:-.008em}
+.lede{font-size:clamp(1.05rem,1rem + .35vw,1.22rem);color:#DCD1BE;line-height:1.62}
+
+/* ---------- about + parallax stage ---------- */
+#about{background:var(--ground);overflow:hidden}
+.pl-far,.pl-mid{position:absolute;pointer-events:none;z-index:0;will-change:transform}
+.pl-far{inset:-22% 0 auto;height:150%;width:100%;opacity:.36;
+  background:url("assets/layer-steam.png") center/cover no-repeat}
+.pl-mid{right:-6%;top:2%;width:min(44vw,460px);opacity:.46}
+@media (max-width:860px){.pl-mid{right:-24%;top:auto;bottom:-6%;width:78vw;opacity:.28}}
+#about .wrap{position:relative;z-index:2}
+
+.origins{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2.6rem}
+.origins div{background:linear-gradient(var(--ground),var(--ground)) padding-box,
+    var(--brand-maroon);padding:1.15rem 1.1rem;position:relative}
+.origins div::before{content:"";position:absolute;inset:0 0 auto;height:2px;
+  background:var(--brand-maroon)}
+.origins dt{font-family:"Instrument Serif","Lora",Georgia,serif;font-size:1.35rem;
+  color:var(--paper);margin-bottom:.15rem}
+.origins dd{margin:0;font-size:.86rem;color:var(--paper-dim);line-height:1.45}
+
+/* ---------- menu ---------- */
+#menu{background:var(--ground-2)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));
+  gap:2.4rem 3rem;margin-top:.6rem}
+.menu-grid h3{font-size:1.35rem;margin-bottom:.5rem}
+.menu-grid h3 + p{font-size:.95rem;color:var(--paper-dim);margin:0;max-width:34ch}
+.menu-note{margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--rule);
+  display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 2rem;
+  justify-content:space-between}
+.menu-acts{display:flex;flex-wrap:wrap;gap:.7rem}
+.menu-note p{margin:0;color:var(--paper-dim);font-size:.95rem;max-width:44ch}
+
+/* ---------- reviews ---------- */
+#reviews{background:var(--ground)}
+.quotes{display:grid;gap:3.2rem;margin-top:.4rem}
+@media (min-width:900px){.quotes{grid-template-columns:1fr 1fr;gap:3.5rem}}
+blockquote{margin:0}
+blockquote p{font-family:"Instrument Serif","Lora",Georgia,serif;font-style:italic;
+  font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);line-height:1.32;color:var(--paper);
+  margin:0 0 1rem;text-wrap:pretty}
+blockquote footer{font-size:.87rem;color:var(--jade);letter-spacing:.02em}
+.rating{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  font-size:.9rem;color:var(--paper-dim)}
+
+/* ---------- visit ---------- */
+#visit{background:var(--ground-2)}
+.visit-grid{display:grid;gap:3rem;margin-top:.5rem}
+@media (min-width:880px){.visit-grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.hours{width:100%;border-collapse:collapse;margin-top:.4rem}
+.hours th,.hours td{text-align:left;padding:.62rem 0;border-bottom:1px solid var(--rule);
+  font-weight:400;font-size:.98rem}
+.hours th{color:var(--paper-dim);font-weight:400}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.now th,.hours tr.now td{color:var(--lamp)}
+.addr{font-style:normal;font-size:1.15rem;line-height:1.55;margin-bottom:1.5rem}
+.opts{list-style:none;padding:0;margin:1.8rem 0 0;display:grid;gap:.55rem;
+  font-size:.95rem;color:var(--paper-dim)}
+.opts li{display:flex;gap:.7rem;align-items:baseline}
+.opts li::before{content:"";width:16px;height:2px;background:var(--lacquer);
+  transform:skewX(-32deg);flex:none;position:relative;top:-.3em}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--ink);padding-block:clamp(3rem,7vh,4.5rem) 2.5rem;
+  border-top:1px solid var(--rule)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));
+  gap:2.5rem 3rem;align-items:start}
+.foot-grid h3{font-size:1.9rem;margin-bottom:.4rem}
+.foot-links{display:grid;gap:.6rem;font-size:.98rem}
+.foot-links a{text-decoration:none;color:var(--paper);border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s;justify-self:start}
+.foot-links a:hover{color:var(--lamp);border-bottom-color:var(--lamp)}
+.colophon{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--rule);
+  font-size:.8rem;color:#8A7A68;display:flex;flex-wrap:wrap;gap:.4rem 1.5rem}
+
+/* ---------- one page-load reveal, nothing more ---------- */
+.rise{opacity:0;transform:translate3d(0,18px,0)}
+.loaded .rise{opacity:1;transform:none;
+  transition:opacity .8s cubic-bezier(.22,.7,.3,1),transform .8s cubic-bezier(.22,.7,.3,1)}
+.loaded .rise:nth-child(2){transition-delay:.09s}
+.loaded .rise:nth-child(3){transition-delay:.17s}
+.loaded .rise:nth-child(4){transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  .rise,.loaded .rise{opacity:1;transform:none;transition:none}
+  .hero-media,.hero-drift,.pl-far,.pl-mid{transform:none!important;will-change:auto}
+  .hero-drift{opacity:.32}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="bar">
+  <a class="brand" href="#top">
+    <img src="assets/mark-512.png" alt="" width="34" height="34" decoding="async">
+    <b>Mr. Chopsticks</b>
+  </a>
+  <nav aria-label="Primary">
+    <a class="jump" href="#menu">Menu</a>
+    <a class="jump" href="#visit">Hours &amp; location</a>
+    <a class="jump" href="tel:+19403825437">(940) 382-5437</a>
+    <a class="btn btn-fill" href="https://ordering.chownow.com/order/16624/locations"
+       target="_blank" rel="noopener">Order online</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="hero-media" data-depth="0.22" aria-hidden="true">
+    <video id="heroVid" autoplay muted loop playsinline preload="auto"
+           poster="assets/hero-poster.jpg" tabindex="-1">
+      <source src="assets/hero.webm" type="video/webm">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-drift" data-depth="0.42" aria-hidden="true"></div>
+
+  <div class="wrap hero-in">
+    <p class="eyebrow rise" id="status">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Open 11am–9pm, every day</span>
+    </p>
+    <h1 class="rise" id="hero-h">Mr.<em>Chopsticks</em></h1>
+    <p class="hero-lede rise">Five kitchens’ worth of cooking on one Denton menu:
+      sushi, stir-fry, Thai and Chinese, cooked here since 1985.</p>
+    <div class="hero-acts rise">
+      <a class="btn btn-fill" href="https://ordering.chownow.com/order/16624/locations"
+         target="_blank" rel="noopener">Order online</a>
+      <a class="btn btn-line" href="tel:+19403825437">Call (940) 382-5437</a>
+      <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mr.+Chopsticks%2C+1633+Scripture+St%2C+Denton%2C+TX+76201"
+         target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <p class="hero-facts rise">
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mr.+Chopsticks%2C+1633+Scripture+St%2C+Denton%2C+TX+76201"
+         target="_blank" rel="noopener">1633 Scripture St, Denton</a>
+      <span>$10–20 per person</span>
+      <span>Dine in, pick-up or delivery</span>
+    </p>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-h">
+  <div class="pl-far" data-depth="0.16" aria-hidden="true"></div>
+  <img class="pl-mid" data-depth="0.40" src="assets/layer-arc.png" alt="" aria-hidden="true" loading="lazy" width="900" height="900">
+  <div class="wrap">
+    <p class="rest"><i></i><span>About</span></p>
+    <div class="measure">
+      <h2 class="rise">One counter,<br>five kitchens.</h2>
+      <p class="lede rise">Mr. Chopsticks has been cooking on Scripture Street
+        since 1985. The menu pulls from China, Thailand, Vietnam, Japan and
+        India, and the kitchen builds its dishes around fresh herbs, raw
+        vegetables and a light hand with seasoning rather than heavy sauce.</p>
+      <p class="lede rise">The dining room is plain and comfortable, there’s
+        seating outside, and there’s no reservation book. You walk in, you
+        order, you eat. Vegan options run through the whole menu, not just a
+        corner of it.</p>
+    </div>
+    <dl class="origins rise">
+      <div><dt>China</dt><dd>Stir-fry and fried rice</dd></div>
+      <div><dt>Japan</dt><dd>Sushi rolls and sashimi</dd></div>
+      <div><dt>Thailand</dt><dd>Curries and coconut soups</dd></div>
+      <div><dt>Vietnam</dt><dd>Herbs, broths, fresh greens</dd></div>
+      <div><dt>India</dt><dd>Spice in the seasoning</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <p class="rest"><i></i><span>What they cook</span></p>
+    <div class="measure">
+      <h2 class="rise" id="menu-h">Built to feed you<br>for under twenty.</h2>
+      <p class="lede rise">The menu is long. Here’s the shape of it. The full
+        list, with current prices, lives on the restaurant’s own menu page.</p>
+    </div>
+    <div class="menu-grid">
+      <div><h3>Sushi</h3><p>Rolls made with the rice outside or inside, plus
+        cuts of eel, salmon, scallop, shrimp, tuna, yellowtail and smoked salmon.</p></div>
+      <div><h3>Stir-fry &amp; rice</h3><p>Wok dishes, fried rice and noodle
+        plates, most with a choice of protein and white, brown or noodle base.</p></div>
+      <div><h3>Grilled plates</h3><p>Protein grilled with vegetables over
+        steamed or fried rice.</p></div>
+      <div><h3>Soups</h3><p>Small and large bowls, including coconut-and-lime
+        chicken soup with mushroom, scallion and cilantro.</p></div>
+      <div><h3>Salads &amp; sides</h3><p>Meal-sized salads, cucumber salad,
+        stir-fried green beans, steamed vegetables and vegetable tempura.</p></div>
+      <div><h3>Vegan</h3><p>Plant-based options across the menu rather than a
+        single token section.</p></div>
+    </div>
+    <div class="menu-note">
+      <p>Prices change, so this page doesn’t list them. Google diners report
+        spending $10–20 per person.</p>
+      <span class="menu-acts">
+        <a class="btn btn-fill" href="https://ordering.chownow.com/order/16624/locations"
+           target="_blank" rel="noopener">Order online</a>
+        <a class="btn btn-line" href="https://www.mrchopsticks.com/menu-1"
+           target="_blank" rel="noopener">See the full menu</a>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <p class="rest"><i></i><span>What diners say</span></p>
+    <h2 class="rise" id="rev-h">In their words.</h2>
+    <div class="quotes">
+      <blockquote class="rise">
+        <p>Quick service and great prices ..their menu has Chinese, Sushi and Thai!</p>
+        <footer>Christina Dixon, on Google</footer>
+      </blockquote>
+      <blockquote class="rise">
+        <p>Highly recommend this place for a filling and reasonably priced comfort meal!</p>
+        <footer>Leila Louise Henley, on Google</footer>
+      </blockquote>
+    </div>
+    <p class="rating">Rated 4.4 out of 5 from 529 votes on Facebook. Reviews are
+      quoted as written by the people who left them.</p>
+  </div>
+</section>
+
+<section id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <p class="rest"><i></i><span>Visit</span></p>
+    <h2 class="rise" id="visit-h">Scripture Street,<br>eleven till nine.</h2>
+    <div class="visit-grid">
+      <div>
+        <table class="hours" id="hours">
+          <caption class="sr-only" style="position:absolute;left:-9999px">Opening hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>11am – 9pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>11am – 9pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>11am – 9pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>11am – 9pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>11am – 9pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>11am – 9pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>11am – 9pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <address class="addr">
+          1633 Scripture St<br>
+          Denton, TX 76201
+        </address>
+        <div class="hero-acts">
+          <a class="btn btn-fill" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mr.+Chopsticks%2C+1633+Scripture+St%2C+Denton%2C+TX+76201"
+             target="_blank" rel="noopener">Directions in Google Maps</a>
+        </div>
+        <p class="lede" style="font-size:1rem;color:var(--paper-dim)">
+          Diners typically spend anywhere from ten minutes to an hour here, so
+          it works for a quick lunch as easily as a sit-down dinner.</p>
+        <ul class="opts">
+          <li>Outdoor seating</li>
+          <li>Walk-ins only, no reservations</li>
+          <li>Vegan options</li>
+          <li>Pick-up and delivery</li>
+          <li>Online ordering through ChowNow</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Mr. Chopsticks</h3>
+        <p style="color:var(--paper-dim);margin:0;max-width:30ch">
+          Pan-Asian cooking in Denton since 1985.</p>
+      </div>
+      <div class="foot-links">
+        <a href="tel:+19403825437">(940) 382-5437</a>
+        <a href="tel:+19405665671">(940) 566-5671</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mr.+Chopsticks%2C+1633+Scripture+St%2C+Denton%2C+TX+76201" target="_blank" rel="noopener">1633 Scripture St, Denton, TX 76201</a>
+      </div>
+      <div class="foot-links">
+        <a href="https://ordering.chownow.com/order/16624/locations" target="_blank" rel="noopener">Order online</a>
+        <a href="https://www.mrchopsticks.com/menu-1" target="_blank" rel="noopener">Full menu</a>
+        <a href="https://www.mrchopsticks.com/" target="_blank" rel="noopener">mrchopsticks.com</a>
+      </div>
+      <div class="foot-links">
+        <a href="https://www.facebook.com/Mr-Chopsticks-307526352985/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.yelp.com/biz/mr-chopsticks-denton" target="_blank" rel="noopener">Yelp</a>
+        <a href="https://www.google.com/maps/place/Mr.+Chopsticks/@33.2185171,-97.1524982,17z/data=!3m1!4b1!4m5!3m4!1s0x864dca6641826fe5:0x821f3728ac52cc72!8m2!3d33.2185171!4d-97.1503095" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+    <p class="colophon">
+      <span>Open 11am–9pm, seven days.</span>
+      <span>No reservations.</span>
+    </p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Mr. Chopsticks",
+  "url":"https://mrchopsticksdenton.com/",
+  "image":"https://mrchopsticksdenton.com/assets/og.jpg",
+  "telephone":"+1-940-382-5437",
+  "servesCuisine":["Pan-Asian","Chinese","Japanese","Thai","Sushi"],
+  "priceRange":"$10-20",
+  "hasMenu":"https://www.mrchopsticks.com/menu-1",
+  "sameAs":[
+    "https://www.mrchopsticks.com/",
+    "https://www.facebook.com/Mr-Chopsticks-307526352985/",
+    "https://www.yelp.com/biz/mr-chopsticks-denton"
+  ],
+  "geo":{"@type":"GeoCoordinates","latitude":33.2185171,"longitude":-97.1503095},
+  "potentialAction":{
+    "@type":"OrderAction",
+    "target":{
+      "@type":"EntryPoint",
+      "urlTemplate":"https://ordering.chownow.com/order/16624/locations",
+      "inLanguage":"en-US",
+      "actionPlatform":["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]
+    },
+    "deliveryMethod":["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"]
+  },
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1633 Scripture St",
+    "addressLocality":"Denton",
+    "addressRegion":"TX",
+    "postalCode":"76201",
+    "addressCountry":"US"
+  },
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"11:00","closes":"21:00"
+  }],
+  "acceptsReservations":false
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* ---- page-load reveal (one orchestrated moment, not per-section) ---- */
+  requestAnimationFrame(function(){ document.body.classList.add("loaded"); });
+
+  /* ---- hero video: keep the poster if autoplay is refused ---- */
+  var vid = document.getElementById("heroVid");
+  if (vid) {
+    if (reduce.matches) {
+      vid.removeAttribute("autoplay");
+      try { vid.pause(); } catch(e){}
+    } else {
+      var p = vid.play();
+      if (p && p.catch) { p.catch(function(){ /* poster stands in */ }); }
+    }
+  }
+
+  /* ---- open / closed, from the real 11:00–21:00 schedule ---- */
+  (function(){
+    var dot = document.getElementById("statusDot"),
+        txt = document.getElementById("statusText");
+    if (!dot || !txt) return;
+    /* the restaurant's clock, not the visitor's */
+    var now = new Date(), hh, mm, dayIdx;
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Chicago", hour: "numeric", minute: "numeric",
+        weekday: "short", hourCycle: "h23"
+      }).formatToParts(now).reduce(function(o, p){ o[p.type] = p.value; return o; }, {});
+      hh = parseInt(parts.hour, 10);
+      mm = parseInt(parts.minute, 10);
+      dayIdx = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(parts.weekday);
+    } catch (e) {
+      hh = now.getHours(); mm = now.getMinutes(); dayIdx = now.getDay();
+    }
+    if (dayIdx < 0) dayIdx = now.getDay();
+    var mins = hh * 60 + mm,
+        open = 11 * 60, close = 21 * 60,
+        isOpen = mins >= open && mins < close;
+    if (isOpen) {
+      txt.textContent = mins >= close - 60
+        ? "Open now, closing at 9pm" : "Open now until 9pm";
+    } else {
+      dot.classList.add("shut");
+      txt.textContent = "Closed now. Opens at 11am";
+    }
+    var row = document.querySelector('#hours tr[data-day="' + dayIdx + '"]');
+    if (row) row.classList.add("now");
+  })();
+
+  /* ---- header state ---- */
+  var bar = document.getElementById("bar");
+  function barState(y){ bar.classList.toggle("stuck", y > 40); }
+
+  /* ---- transform-based parallax, three depths ---- */
+  var layers = [].slice.call(document.querySelectorAll("[data-depth]")).map(function(el){
+    return { el: el, stage: el.parentNode, depth: parseFloat(el.getAttribute("data-depth")) };
+  });
+  var ticking = false;
+
+  function amplitude(){
+    /* gentler on small screens, where one swipe covers far more of the page */
+    return window.innerWidth < 760 ? 0.55 : 1;
+  }
+
+  function frame(){
+    ticking = false;
+    barState(window.pageYOffset || document.documentElement.scrollTop);
+    if (reduce.matches) return;
+    var vh = window.innerHeight, amp = amplitude();
+    for (var i = 0; i < layers.length; i++) {
+      var L = layers[i], box = L.stage.getBoundingClientRect();
+      /* skip work while the layer's section is nowhere near the viewport */
+      if (box.bottom < -vh || box.top > vh * 2) continue;
+      /* how far this section has travelled through the viewport, roughly -1..1 */
+      var prog = (box.top + box.height / 2 - vh / 2) / vh;
+      if (prog > 1.6) prog = 1.6; else if (prog < -1.6) prog = -1.6;
+      var shift = -prog * L.depth * vh * 0.42 * amp;
+      L.el.style.transform = "translate3d(0," + shift.toFixed(2) + "px,0)";
+    }
+  }
+
+  function onScroll(){
+    if (!ticking) { ticking = true; requestAnimationFrame(frame); }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  if (reduce.addEventListener) {
+    reduce.addEventListener("change", function(){
+      if (reduce.matches) {
+        layers.forEach(function(L){ L.el.style.transform = ""; });
+        if (vid) { try { vid.pause(); } catch(e){} }
+      } else if (vid) { vid.play().catch(function(){}); }
+    });
+  }
+  frame();
+})();
+</script>
+</body>
+</html>
